@@ -40,11 +40,11 @@ VALUES
 
 INSERT INTO tracks (track_title, album_id, track_length)
 VALUES
-    ('Random title 1', 1, 259),
-    ('Random title 2', 1, 182),
-    ('Random title 3', 2, 225),
-    ('Random title 4', 2, 211),
-    ('Random title 5', 3, 292),
+    ('my own', 1, 259),
+    ('my', 1, 182),
+    ('oh my god', 2, 225),
+    ('myself', 2, 211),
+    ('by myself', 3, 292),
     ('Random title 6', 3, 538),
     ('Random title 7', 4, 248),
     ('Random title 8', 4, 337),

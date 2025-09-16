@@ -17,8 +17,7 @@ WHERE author_name NOT LIKE '% %';
 
 SELECT track_title
 FROM tracks
-WHERE track_title LIKE '%мой%' OR track_title LIKE '%my%';
--- У меня нет таких треков
+WHERE track_title ~* '\y(my|мой)\y';
 
 SELECT g.genre_name, COUNT(ag.author_id) AS authors_count
 FROM genres g
@@ -43,8 +42,7 @@ WHERE author_id NOT IN (
     SELECT DISTINCT aa.author_id
     FROM album_authors aa
     JOIN albums a ON aa.album_id = a.album_id
-    WHERE a.release_year = 2020
-);
+    WHERE a.release_year = 2020);
 
 SELECT DISTINCT c.compilation_title
 FROM compilations c
